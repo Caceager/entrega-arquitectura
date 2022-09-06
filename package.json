@@ -1,0 +1,48 @@
+{
+  "name": "untitled",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startNginx": "pm2 start server.js --name=\\\\\\\\\\\\\\\"Servidor-principal\\\\\\\\\\\\\\\" --watch -- -p 8081 -m fork\\\\\\\\npm2 start common/controllers/randomController.js --name=\\\\\\\\\\\\\\\"Subservidor-random1\\\\\\\\\\\\\\\" --watch -- -p 8082\\\\\\\\npm2 start random.js --name=\\\\\\\\\\\\\\\"Subservidor-random2\\\\\\\\\\\\\\\" --watch -- -p 8083\\\\\\\\npm2 start random.js --name=\\\\\\\\\\\\\\\"Subservidor-random3\\\\\\\\\\\\\\\" --watch -- -p 8084\\\\\\\\npm2 start random.js --name=\\\\\\\\\\\\\\\"Subservidor-random4\\\\\\\\\\\\\\\" --watch -- -p 8085",
+    "startCluster": "node . -p 8081 -m cluster",
+    "startFork": "node . -p 8081 -m fork",
+    "stop": "pm2 kill",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "0x": "^5.4.1",
+    "autocannon": "^7.9.0",
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "forever": "^4.0.3",
+    "handlebars": "^4.7.7",
+    "knex": "^2.1.0",
+    "log4js": "^6.6.1",
+    "minimist": "^1.2.6",
+    "mongoose": "^6.4.3",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.16",
+    "normalizr": "^3.6.2",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.7.3",
+    "pm2": "^5.2.0",
+    "socket.io": "^4.5.1",
+    "sqlite3": "^5.0.8",
+    "@faker-js/faker": "^7.3.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.3.0"
+  }
+}

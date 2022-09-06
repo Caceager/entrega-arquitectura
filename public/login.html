@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<center>
+    <h1>Ingreso de usuario.</h1>
+    <button class="redirectButton" onclick="goToRegister()">Registarse</button>
+    <form action="/usuarios/login", method="post">
+        <label for="inputNombre">Correo</label>
+        <input id= "inputNombre" name= "username" type="email">
+        <label for="inputPass">Contraseña</label>
+        <input id= "inputPass" name= "password" type="password">
+        <button type="submit">Ingresar</button>
+    </form>
+</center>
+
+<script>
+    function goToRegister(){
+        window.location.href = "/usuarios/register";
+    }
+</script>
+</body>
+</html>
